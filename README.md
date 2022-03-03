@@ -1,2 +1,100 @@
 # gateio-api-web
+
 gateio站点层封装，对外提供REST服务
+
+
+```
+[
+	{
+		"methodName":"createSpotPriceTriggeredOrder",
+		"inType":"io.github.road.gateio.exchange.model.dto.request.SpotPriceTriggeredOrderRequestDTO",
+		"outType":"io.github.road.gateio.exchange.model.dto.Result"
+	},
+	{
+		"methodName":"candlestickRecentMust",
+		"inType":"java.lang.String",
+		"outType":"io.github.road.gateio.exchange.model.dto.result.CandlestickResultDTO"
+	},
+	{
+		"methodName":"getTickerMust",
+		"inType":"no_in_param",
+		"outType":"java.util.List"
+	},
+	{
+		"methodName":"getSingleMonitoringCycleChangePercentage",
+		"inType":"io.github.road.gateio.exchange.model.dto.request.CandlestickRequestDTO",
+		"outType":"java.math.BigDecimal"
+	},
+	{
+		"methodName":"listCandlestickMust",
+		"inType":"io.github.road.gateio.exchange.model.dto.request.CandlestickRequestDTO",
+		"outType":"java.util.List"
+	},
+	{
+		"methodName":"listCurrencyPairsMust",
+		"inType":"no_in_param",
+		"outType":"java.util.List"
+	},
+	{
+		"methodName":"spotOderQueryMustOrNull",
+		"inType":"io.github.road.gateio.exchange.model.dto.request.SpotOderQueryRequestDTO",
+		"outType":"io.github.road.gateio.exchange.model.dto.result.CreateSpotOrderResultDTO"
+	},
+	{
+		"methodName":"cancelSpotPriceTriggeredOrderMust",
+		"inType":"java.lang.String",
+		"outType":"io.github.road.gateio.exchange.model.dto.result.CancelSpotPriceTriggeredOrderResultDTO"
+	},
+	{
+		"methodName":"createSpotOrder",
+		"inType":"io.github.road.gateio.exchange.model.dto.request.CreateSpotOrderRequestDTO",
+		"outType":"io.github.road.gateio.exchange.model.dto.Result"
+	},
+	{
+		"methodName":"fetchCurrencyTodayChangePercentage",
+		"inType":"java.lang.String",
+		"outType":"java.math.BigDecimal"
+	},
+	{
+		"methodName":"prevCandlestickMust",
+		"inType":"io.github.road.gateio.exchange.model.dto.request.PrevCandlestickRequestDTO",
+		"outType":"io.github.road.gateio.exchange.model.dto.result.CandlestickResultDTO"
+	},
+	{
+		"methodName":"fetchTodayFirstCandlestick",
+		"inType":"java.lang.String",
+		"outType":"io.github.road.gateio.exchange.model.dto.result.CandlestickResultDTO"
+	},
+	{
+		"methodName":"createSpotPriceTriggeredOrderMust",
+		"inType":"io.github.road.gateio.exchange.model.dto.request.SpotPriceTriggeredOrderRequestDTO",
+		"outType":"io.github.road.gateio.exchange.model.dto.result.SpotPriceTriggeredOrderResultDTO"
+	},
+	{
+		"methodName":"currencyPairsMust",
+		"inType":"java.lang.String",
+		"outType":"io.github.road.gateio.exchange.model.dto.result.CurrencyPairResultDTO"
+	},
+	{
+		"methodName":"eatSpotOrderMarketMustOrNull",
+		"inType":"io.github.road.gateio.exchange.model.dto.request.EatSpotOrderMarketBuyRequestDTO",
+		"outType":"io.github.road.gateio.exchange.model.dto.result.EatSpotOrderMarketBuyResultDTO"
+	},
+	{
+		"methodName":"listOrderBookMust",
+		"inType":"io.github.road.gateio.exchange.model.dto.request.ListOrderBookRequestDTO",
+		"outType":"io.github.road.gateio.exchange.model.dto.result.ListOrderBookResultDTO"
+	},
+	{
+		"methodName":"spotAccountMust",
+		"inType":"java.lang.String",
+		"outType":"io.github.road.gateio.exchange.model.dto.result.SpotAccountResultDTO"
+	},
+	{
+		"methodName":"marketSellMustOrNull",
+		"inType":"io.github.road.gateio.exchange.model.dto.request.EatSpotOrderMarketSellRequestDTO",
+		"outType":"io.github.road.gateio.exchange.model.dto.result.EatSpotOrderMarketSellResultDTO"
+	}
+]
+```
+
