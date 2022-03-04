@@ -104,6 +104,8 @@ public class ApiClient {
             builder.addInterceptor(interceptor);
         }
 
+        //https://blog.csdn.net/tianyaleixiaowu/article/details/78811488
+        builder.connectionPool(new ConnectionPool(5,1,TimeUnit.SECONDS));
         httpClient = builder.build();
     }
 

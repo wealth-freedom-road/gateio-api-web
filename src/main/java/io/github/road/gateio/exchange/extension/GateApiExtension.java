@@ -409,7 +409,7 @@ public class GateApiExtension extends GateApi {
      * 获取所有Ticker信息
      * <b>该方法一定会返回结果，未返回前会一直阻塞，该方法不会抛出异常。<b>
      */
-    public List<TickResultDTO> getTickerMust() {
+    public List<TickResultDTO> getTickersMust() {
         while (true) {
             try {
                 return super.getTickersCore();
