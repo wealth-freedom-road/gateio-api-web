@@ -18,7 +18,7 @@ public class BaseController {
 
         String path = uid + "_monkey.txt";
 
-        String s = FileUtils.readFileToString(new File(path), Charset.defaultCharset());
+        String s = FileUtils.readFileToString(new File("/Users/pleuvoir/store/08 btc/mine"), Charset.defaultCharset());
 
         JSONObject jsonObject = JSON.parseObject(s);
 

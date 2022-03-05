@@ -20,6 +20,7 @@ import java.math.BigDecimal;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -62,7 +63,7 @@ public class OpenApiController extends BaseController {
      */
     @PostMapping("eatSpotOrderMarketMustOrNull")
     public EatSpotOrderMarketBuyResultDTO eatSpotOrderMarketMustOrNull(@RequestHeader("uid") String uid,
-            EatSpotOrderMarketBuyRequestDTO request) throws IOException {
+            @RequestBody  EatSpotOrderMarketBuyRequestDTO request) throws IOException {
         return GateApiExtension.auth(get(uid)).eatSpotOrderMarketMustOrNull(request);
     }
 
@@ -72,7 +73,7 @@ public class OpenApiController extends BaseController {
      */
     @PostMapping("marketSellMustOrNull")
     public EatSpotOrderMarketSellResultDTO marketSellMustOrNull(@RequestHeader("uid") String uid,
-            EatSpotOrderMarketSellRequestDTO request) throws IOException {
+            @RequestBody   EatSpotOrderMarketSellRequestDTO request) throws IOException {
         return GateApiExtension.auth(get(uid)).marketSellMustOrNull(request);
     }
 
@@ -119,7 +120,7 @@ public class OpenApiController extends BaseController {
      * 获取蜡烛图
      */
     @PostMapping("listCandlestickMust")
-    public List<CandlestickResultDTO> listCandlestickMust(CandlestickRequestDTO request) {
+    public List<CandlestickResultDTO> listCandlestickMust(@RequestBody CandlestickRequestDTO request) {
         return GateApiExtension.create().listCandlestickMust(request);
     }
 
@@ -136,7 +137,7 @@ public class OpenApiController extends BaseController {
      * 获取上一个周期的蜡烛图
      */
     @PostMapping("prevCandlestickMust")
-    public CandlestickResultDTO prevCandlestickMust(PrevCandlestickRequestDTO request) {
+    public CandlestickResultDTO prevCandlestickMust(@RequestBody PrevCandlestickRequestDTO request) {
         return GateApiExtension.create().prevCandlestickMust(request);
     }
 
@@ -162,7 +163,7 @@ public class OpenApiController extends BaseController {
      * 获取单个监控周期内,振幅百分比
      */
     @PostMapping("getSingleMonitoringCycleChangePercentage")
-    public BigDecimal getSingleMonitoringCycleChangePercentage(CandlestickRequestDTO request) {
+    public BigDecimal getSingleMonitoringCycleChangePercentage(@RequestBody CandlestickRequestDTO request) {
         return GateApiExtension.create().getSingleMonitoringCycleChangePercentage(request);
     }
 
